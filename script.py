@@ -53,3 +53,43 @@ for i in range(0,len(sequence)):
     tuples+=(sequence[i],)
 
 print(lists,'\n',tuples)
+
+#Q5
+# Define a class which has at least two methods:
+# getString: to get a string from console input
+# printString: to print the string in upper case.
+# Also please include simple test function to test the class methods.
+
+class test:
+    def __init__(self):
+        self.value=''
+    def getString(self):
+        self.value=input("Enter a Value : ")
+        
+    def printString(self):
+        print('\n',self.value.upper())
+t=test()
+t.getString()
+t.printString()
+
+#Q6
+# Write a program that calculates and prints the value according to the given formula:
+# Q = Square root of [(2 * C * D)/H]
+# Following are the fixed values of C and H:
+# C is 50. H is 30.
+# D is the variable whose values should be input to your program in a comma-separated sequence.
+# Example
+# Let us assume the following comma separated input sequence is given to the program:
+# 100,150,180
+# The output of the program should be:
+# 18,22,24
+import math
+c=50
+h=30
+d=input("Enter Comma Seperated Sequence : ")
+d=d.split(',')
+l=list()
+for number in d:
+    q=math.sqrt((2*c*int(number))/h)
+    l.append(str(int(q)))
+print(','.join(l))
